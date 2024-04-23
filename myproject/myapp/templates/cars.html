@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+{% load static %}
+
+
+
+{% block css_files %}
+<link rel='stylesheet' href="{% static 'css/car.css' %}">
+{% endblock css_files %}
+
+
+{% block page_title %}
+    
+   
+{% endblock page_title %}
+
+
+{% block content %}
+<div class="container">
+    <div class="card">
+      <img src="{% static 'img/alfa.jpg' %}" alt="Car 1">
+      <h3>Alfa Romeo 4C</h3>
+      <p>Alfa Romeo 4C: Agile, sleek, and exhilarating. This compact sports car embodies Italian style, turbocharged power, and thrilling handling for an electrifying drive</p>
+      <p>Price: $67,000</p>
+      <button>Buy Now</button>
+    </div>
+    <div class="card">
+        <img src="{% static 'img/alfa156.jpg' %}" alt="Car 2">
+        <h3>Alfa Romeo 156</h3>
+        <p>Alfa Romeo 156: Elegant design, spirited performance. A classic blend of style and driving excitement</p>
+        <p>Price: $3800</p>
+        <button>Buy Now</button>
+      </div>
+      <div class="card">
+        <img src="{% static 'img/bugatti.jpg' %}" alt="Car 3">
+        <h3>Bugatti Chiron</h3>
+        <p>Bugatti Chiron: A pinnacle of automotive engineering and luxury. This hypercar exemplifies speed and elegance, boasting extraordinary performance, unparalleled craftsmanship, and a legendary W16 engine</p>
+        <p>Price: $3,000,000</p>
+        <button>Buy Now</button>
+      </div>
+      <div class="card">
+        <img src="{% static 'img/nissan.jpg' %}" alt="Car 4">
+        <h3>Nissan Skyline R34</h3>
+        <p>Nissan Skyline R34: A JDM icon renowned for its performance and style. This legendary sports car combines Japanese engineering with thrilling performance, delivering agile handling and a distinctive design</p>
+        <p>Price: $120,000</p>
+        <button>Buy Now</button>
+      </div>
+      <div class="card">
+        <img src="{% static 'img/tesla.jpg' %}" alt="Car 5">
+        <h3>Tesla Cybertruck</h3>
+        <p>Tesla Cybertruck: A bold reinvention of the pickup. Futuristic design meets sustainable innovation in this all-electric truck, offering impressive performance, robust utility, and cutting-edge technology.</p>
+        <p>Price: $39,900</p>
+        <button>Buy Now</button>
+      </div>
+      <div class="card">
+        <img src="{% static 'img/alfa_gulia.png' %}" alt="Car 6">
+        <h3>Alfa Romeo Giulia Quadrifoglio</h3>
+        <p>Alfa Romeo Giulia Quadrifoglio: A high-performance masterpiece blending Italian elegance and exhilarating power. This sports sedan embodies precision engineering, dynamic handling</p>
+        <p>Price: $79,000</p>
+        <button>Buy Now</button>
+      </div>
+      
+{% endblock %}

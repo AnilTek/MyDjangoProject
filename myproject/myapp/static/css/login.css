@@ -1,0 +1,53 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+#login {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 700px; 
+    height: 350px;
+    padding: 20px;
+    border-radius: 30px;
+    border: 1px solid rgb(2, 255, 2) ;
+    color: rgb(2, 255, 2);
+}
+input{
+    border-color: rgb(2, 255, 2);
+    margin: 2px ;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: black;
+    color: rgb(2, 255, 2)
+}
+#submit{
+    display: flex;
+    border-color: rgb(2, 255, 2);
+    margin: 2px ;
+    border-radius: 10px;
+    padding: 10px;
+    width: 100px;
+    background-color: black;
+    color: rgb(2, 255, 2);
+    margin-left: 50px;
+    align-items: center;
+}
+#submit:hover{
+    box-shadow: 0 0 5px rgb(2, 255, 2),
+    0 0 25px rgb(2, 255, 2) , 0 0 50px rgb(2, 255, 2),
+    0 0 100px rgb(2, 255, 2) , 0 0 200px rgb(2, 255, 2);
+}
+form{
+    margin-top: 40px;
+}
+#a {
+    text-decoration: none;
+    color: rgb(2, 255, 2);
+}

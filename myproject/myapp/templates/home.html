@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+{% load static %}
+
+
+
+{% block css_files %}
+<link rel='stylesheet' href="{% static 'css/home.css' %}">
+<style>
+    body {
+        background-image: url("{% static 'img/martix.gif' %}");
+        background-size: cover;
+       
+    }
+</style>
+{% endblock css_files %}
+
+
+{% block page_title %}
+    
+   
+{% endblock page_title %}
+
+
+{% block content %}
+
+<section>
+    <section class="introduction">
+        <h1>Welcome to Our Website</h1>
+        <p>Welcome to our website! We bring you cutting-edge AI technology with two powerful models: one predicts car prices with accuracy, while the other helps in making precise loan approval predictions. Explore our product sections featuring a diverse range of Cars and Houses, where you can find detailed information to aid in your decision-making process.</p>
+    </section>
+    <p id ="anil">Anil Sabri Tek</p>
+    
+        
+    </div>
+</section>
+
+{% endblock %}

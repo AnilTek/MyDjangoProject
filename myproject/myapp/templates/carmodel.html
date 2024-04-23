@@ -1,0 +1,79 @@
+{% extends "layout.html" %}
+{% load static %}
+
+
+
+{% block css_files %}
+<link rel='stylesheet' href="{% static 'css/carmodel.css' %}">
+{% endblock css_files %}
+
+
+{% block page_title %}
+    
+   
+{% endblock page_title %}
+
+
+{% block content %}
+<h1 id='websiteheader'>Right Place and Right Price For Your Car Only For FORD !</h1>
+
+<section>
+    <form action="{% url "carmodel" %}" method='POST'>
+        {% csrf_token %}
+    <div id = 'carmodelform'>
+        <label for="model">Model:</label>
+        <input type="text" name="model" id="model" requried>
+        <br><br>
+        <label for="year">Year:</label>
+        <input type="number" name="year" id="year" requried>
+        <br><br>
+        <label for="millage">Millage:</label>
+        <input type="number" name="millage" id="millage" requried>
+        <br><br>
+        <label for="tax">Tax:</label>
+        <input type="number" name="tax" id="tax" requried>
+        <br><br>
+        <label for="mpg">Mpg:</label>
+        <input type="number" name="mpg" id="mpg" requried>
+        <br><br>
+        <label for="engineSize">Engine Size:</label>
+        <input type="number" name="engineSize" id="engineSize" step="any" requried>
+        <br><br>
+        <label for="radio">Transmission Type</label>
+        <br>
+        <br>
+        <input type="radio" name ='transmission' value='0' id='transmission_Automatic' required>Automatic
+        <input type="radio" name ='transmission' value='1' id='transmission_Manual'>Manual
+        <input type="radio" name ='transmission' value='2' id='transmission_Semi'>Semi
+        <br><br>
+        <label for="radio">Fuel Type</label>
+        <br>
+        <br>
+        <input type="radio" name ='fuel' value='0' id='fuel_Diesel' required>Diesel
+        <input type="radio" name ='fuel' value='1' id='fuel_Electric'>Electric
+        <input type="radio" name ='fuel' value='2' id='fuel_Hybrid'>Hybrid
+        <input type="radio" name ='fuel' value='3' id='fuel_Other' >Other
+        <input type="radio" name ='fuel' value='4' id='fuel_Petrol'>Petrol
+        <br>
+        <br><br>
+        <button>Calculate Estimated Price</button>
+    </form>
+        
+
+    </div>
+    <form action="">
+    <div id ='result'>
+        {% if context > 4 %}
+        <h3>Estimated Car Price : {{context}} $ </h3> 
+        {% else %}
+        <h3>Estimated Car Price : {{context}} </h3> 
+        {% endif %}
+        
+        <button id='accept' value='1'>Accept</button>
+        <button id='decline' value='0'>Decline</button>
+
+    </form>
+    </div>
+
+</section>
+{% endblock %}

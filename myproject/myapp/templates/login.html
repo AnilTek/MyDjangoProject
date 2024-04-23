@@ -1,0 +1,35 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    
+</head>
+<body>
+    <section id='login'>
+        <form method="POST">
+            {% csrf_token %}
+            
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="username" placeholder="username...">
+            <br><br>
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" placeholder="password...">
+            <br><br>
+            <input type="submit" value="    LOG IN" id="submit">
+        </form>
+        <p><a id='a' href="{% url "signup_request" %}">Create Account !</a></p>
+        <p><a id='a' href="{% url "resetpassword_request" %}">Forgot My Password !</a></p>
+
+        {% if error %}
+            <p style= 'color:red;'> {{ error_message }} </p>
+            {% endif %}
+        
+    </section>
+    
+</body>
+</html>
+

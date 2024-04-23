@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/signup.css' %}">
+    
+</head>
+<body>
+    
+
+    <section id='login'>
+        <form method="POST">
+            {% csrf_token %}
+            <label for="name">Name:</label><br>
+            <input type="text" id='name' name='name' placeholder="name..." required><br>
+            <label for="surname">Surename:</label><br>
+            <input type="text" id='surname' name='surname' placeholder="surname..." required><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id='email' name='email' placeholder="email..." required><br>
+            <label for="username">Username:</label><br>
+            <input type="text" id='username' name='username' placeholder="username..." required><br>
+            <label for="password">Password:</label><br>
+            <input type="password" id='password' name='password' placeholder="password..." required><br><br>
+            <label for="repassword">Repassword:</label><br>
+            <input type="password" id='repassword' name='repassword' placeholder="repassword..." required><br><br>
+            <input type="radio" name ='gender' value='male' id='male_option' required>Male
+            <input type="radio" name ='gender' value='female' id='male_option'>Female
+            <input type="radio" name ='gender' value='other' id='male_option'>Other
+            <br><br>
+            <select name="sec_question" id="sec_question" required>
+                Security Question:
+                <option value="">Select an question</option>
+                <option value="q1">Name of your first pet ?</option>
+                <option value="q2">Name of your favorite food ?</option>
+                <option value="q3">What is your lucky Number ?</option>
+            </select>
+            <br>
+            <br>
+            <label for="sec_answer">Answer:</label><br>
+            <input type="text" id='sec_answer' name='sec_answer' placeholder="username..." required ><br>
+            <br>
+            <br>
+            <input type="submit" value="   SIGN UP" id='submit'>
+        </form>
+    </section>
+    
+</body>
+</html>

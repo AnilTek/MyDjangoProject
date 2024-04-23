@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+{% load static %}
+
+
+
+{% block css_files %}
+<link rel='stylesheet' href="{% static 'css/houses.css' %}">
+{% endblock css_files %}
+
+
+{% block page_title %}
+    
+   
+{% endblock page_title %}
+
+
+{% block content %}
+<div class="container">
+    <div class="card">
+      <img src="{% static 'img/NewYork.png' %}" alt="House 1">
+      <h3>Central Park Tower Penthouse-217</h3>
+      <p>Embrace New York's essence in this modern apartment with stunning Central Park vistas. Experience luxury living with panoramic park views, contemporary design, and a serene urban retreat, all in one.</p>
+      <P>Central Park Tower Penthouse-217 W 57th New York St Unit Penthouse, New York, NY 10019</P>
+      <p>Price: $195,000,000</p>
+      <button>Buy Now</button>
+    </div>
+    <div class="card">
+        <img src="{% static 'img/newyork2.png' %}" alt="House 2">
+        <h3>NewYork 1338 Park Pl </h3>
+        <p>"Own a slice of New York City living for $270,000. This cozy home in a vibrant neighborhood offers comfort and value, providing an affordable opportunity in the heart of the city</p>
+        <p>4bed 2bath 1.815sqft 1.815 squarefeet 1.584sqft lot
+          338 Park Pl, Crown Heights, NY 11213
+        </p>
+        <p>Price: $275,000</p>
+        <button>Buy Now</button>
+      </div>
+      <div class="card">
+        <img src="{% static 'img/newyork3.png' %}" alt="House 3">
+        <h3>251 Beach 140th St, Rockaway Park, NY 11694</h3>
+        <p>House captures New York's essence. With elegance and space, it offers a luxurious lifestyle in a bustling neighborhood, making it an exquisite investment opportunity.</p>
+        <p>3 bed 2.5+ bath 2.250sqft 2.250 square feet 5.998sqft lot</p>
+        <p>Price: $3,000,000</p>
+        <button>Buy Now</button>
+      </div>
+      <div class="card">
+        <img src="{% static 'img/newyork4.png' %}" alt="House 4">
+        <h3>137 Beach 140th St, Queens, NY 11694</h3>
+        <p>House captures New York's essence. With elegance and space, it offers a luxurious lifestyle in a bustling neighborhood, making it an exquisite investment opportunity.</p>
+        <p>5bed 6.5+bath 5.274sqft lot</p>
+        <p>Price: $11,000,000</p>
+        <button>Buy Now</button>
+      </div>
+      <div class="card">
+        <img src="{% static 'img/losangeles.png' %}" alt="House 5">
+        <h3>12005 Stone Gate Way, Porter Ranch, CA 91326</h3>
+        <p>Located in a desirable area, this property offers a blend of comfort and style, presenting an opportunity to embrace the California lifestyle in a thriving community</p>
+        <p>3bed 3bath 2.269sqft 2.269 square feet 4.000sqft lot</p>
+        <p>Price: $1,049,900</p>
+        <button>Buy Now</button>
+      </div>
+      <div class="card">
+        <img src="{% static 'img/california.png' %}" alt="House 6">
+        <h3>20508 Edgewood Ct, Chatsworth, CA 91311</h3>
+        <p> Nestled in a sought-after area, this residence embodies elegance and sophistication, offering an exceptional living experience in the heart of Chatsworth's vibrant community</p>
+        <p>5bed 4.5+bath 5.377sqft</p>
+        <p>Price: $2,000,000</p>
+        <button>Buy Now</button>
+      </div>
+      
+{% endblock %}

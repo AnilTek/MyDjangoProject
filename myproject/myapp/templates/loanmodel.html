@@ -1,0 +1,83 @@
+{% extends "layout.html" %}
+{% load static %}
+
+
+
+{% block css_files %}
+<link rel='stylesheet' href="{% static 'css/loanmodel1.css' %}">
+{% endblock css_files %}
+
+
+{% block page_title %}
+    
+   
+{% endblock page_title %}
+
+
+{% block content %}
+<h1 id='websiteheader'>Rigth Place For Your Loan Application !</h1>
+
+<section>
+    <form action="{% url "loanmodel" %}" method='POST'>
+        {% csrf_token %}
+    <div id = 'loanmodelform'>
+        <label for="number_of_dependents">Number of Dependents:</label>
+        <input type="number" name="number_of_dependents" id="number_of_dependents" requried>
+        <br><br>
+        <label for="anual_income">Anual Income:</label>
+        <input type="number" name="anual_income" id="anual_income" requried>
+        <br><br>
+        <label for="loan_ammount">Loan Ammount:</label>
+        <input type="number" name="loan_ammount" id="loan_ammount" requried>
+        <br><br>
+        <label for="loan_term">Loan Term:</label>
+        <input type="number" name="loan_term" id="loan_term" requried>
+        <br><br>
+        <label for="cibil_score">Cibil Score:</label>
+        <input type="number" name="cibil_score" id="cibil_score" requried>
+        <br><br>
+        <label for="residental_assets_value">Residental Assets Value:</label>
+        <input type="number" name="residental_assets_value" id="residental_assets_value" requried>
+        <br><br>
+        <label for="commercial_assets_value">Commercial Assets Value:</label>
+        <input type="number" name="commercial_assets_value" id="commercial_assets_value" requried>
+        <br><br>
+        <label for="luxury_assets_value">Luxury Assets Value:</label>
+        <input type="number" name="luxury_assets_value" id="luxury_assets_value" requried>
+        <br><br>
+        <label for="bank_asset_value">Bank Asset Value:</label>
+        <input type="number" name="bank_asset_value" id="bank_asset_value" requried>
+        <br><br>
+        <label for="radio">Graduate</label>
+        <br>
+        <br>
+        <input type="radio" name ='graduate' value='1' id='graduate_yes' required>Graduated
+        <input type="radio" name ='graduate' value='0' id='graduate_no'>Not Graduated
+        <br><br>
+        <label for="radio">Employed</label>
+        <br>
+        <br>
+        <input type="radio" name ='employed' value='1' id='employed_yes' required>Employed
+        <input type="radio" name ='employed' value='0' id='employed_no'>Not Employed
+        <br>
+        <br><br>
+        <button>Ask For Loan</button>
+    </form>
+        
+
+    </div>
+    
+    <div id ='result'>
+        {% if context == 1 %}
+        <h3>Loan Application Status : <span id="accept">Accepted</span> </h3> 
+        {% elif context == 0 %}
+        <h3>Loan Application Status : <span id="decline">Denied </span></h3> 
+        {% else %}
+        <h3>Loan Application Status : Something Went Wrong Please Try Again Later </h3>
+        {% endif %}
+       
+    </div>
+
+</section>
+
+{% endblock %}
